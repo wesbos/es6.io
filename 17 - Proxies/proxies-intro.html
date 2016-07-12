@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Proxies!</title>
+</head>
+<body>
+<script>
+  const person = { name: 'Wes', age: 100 };
+  const personProxy = new Proxy(person, {
+    get(target, name) {
+      // console.log('someone is asking for ', target, name);
+      return target[name].toUpperCase();
+    },
+    set(target, name, value) {
+      if(typeof value === 'string') {
+        target[name] = value.trim().toUpperCase() + '✂️';
+      }
+    }
+  });
+
+  personProxy.name = 'Wesley';
+</script>
+</body>
+</html>

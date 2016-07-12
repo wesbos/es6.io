@@ -1,0 +1,27 @@
+{
+  "name": "es6modules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build": "webpack --progress --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.12.0",
+    "base-64": "^0.1.0",
+    "flickity": "^1.2.1",
+    "insane": "^2.5.0",
+    "jquery": "^3.0.0",
+    "jsonp": "^0.2.0",
+    "lodash": "^4.13.1",
+    "slug": "^0.9.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015-native-modules": "^6.6.0",
+    "webpack": "^2.1.0-beta.15"
+  }
+}

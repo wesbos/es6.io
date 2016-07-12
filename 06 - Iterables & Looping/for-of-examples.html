@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Iterables & Looping</title>
+</head>
+<body>
+  <p>Hi I'm p 01</p>
+  <p>Hi I'm p 02</p>
+  <p>Hi I'm p 03</p>
+  <p>Hi I'm p 04</p>
+  <p>Hi I'm p 05</p>
+  <p>Hi I'm p 06</p>
+  <p>Hi I'm p 07</p>
+  <p>Hi I'm p 08</p>
+  <p>Hi I'm p 09</p>
+  <p>Hi I'm p 10</p>
+<script>
+  const cuts = ['Chuck', 'Brisket', 'Shank', 'Short Rib'];
+
+  // for (const [i, cut] of cuts.entries()) {
+  //   console.log(`${cut} is the ${i + 1} item`);
+  // }
+
+  // function addUpNumbers() {
+  //   let total = 0;
+  //   for (const num of arguments) {
+  //     total += num;
+  //   }
+  //   console.log(total);
+  //   return total;
+  // }
+
+  // addUpNumbers(10,23,52,34,12,13,123);
+
+  // const name = 'Wes Bos';
+  // for (const char of name) {
+  //   console.log(char);
+  // }
+
+  const ps = document.querySelectorAll('p');
+  for (const paragraph of ps) {
+    paragraph.addEventListener('click', function() {
+      console.log(this.textContent);
+    });
+  }
+
+</script>
+</body>
+</html>
