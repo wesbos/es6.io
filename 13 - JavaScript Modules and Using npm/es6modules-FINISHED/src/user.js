@@ -1,6 +1,6 @@
 import slug from 'slug';
 import { url } from './config';
-import base64 from 'base-64';
+import md5 from 'md5';
 
 export default function User(name, email, website) {
   return { name, email, website };
@@ -11,7 +11,7 @@ export function createURL(name) {
 }
 
 export function gravatar(email) {
-  const hash = base64.encode(email);
+  const hash = md5(email);
   const photoURL = `https://www.gravatar.com/avatar/${hash}`;
   return photoURL;
 }
