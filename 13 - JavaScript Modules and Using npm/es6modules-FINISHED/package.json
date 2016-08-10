@@ -10,12 +10,12 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.12.0",
-    "base-64": "^0.1.0",
     "flickity": "^1.2.1",
     "insane": "^2.5.0",
     "jquery": "^3.0.0",
     "jsonp": "^0.2.0",
     "lodash": "^4.13.1",
+    "md5": "^2.1.0",
     "slug": "^0.9.1"
   },
   "devDependencies": {
