@@ -18,11 +18,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/0.8.2/purify.min.js"></script>
 <script>
-  function sanitize(strings, ...values) {
-    const dirty = strings.reduce((prev, next, i) => `${prev}${next}${values[i] || ''}`, '');
-    return DOMPurify.sanitize(dirty);
-  }
-
   const first = 'Wes';
   const aboutMe = `I love to do evil <img src="http://unsplash.it/100/100?random" onload="alert('you got hacked');" />`;
 
