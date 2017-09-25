@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Async Await</title>
+</head>
+
+<body>
+  <script>
+    async function go() {
+      const p1 = fetch('https://api.github.com/users/wesbos');
+      const p2 = fetch('https://api.github.com/users/stolinski');
+    }
+
+    go();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Promisifying Functions</title>
+</head>
+
+<body>
+  <script>
+    // navigator.geolocation.getCurrentPosition(function (pos) {
+    //   console.log('it worked!');
+    //   console.log(pos);
+    // }, function (err) {
+    //   console.log('it failed!');
+    //   console.log(err);
+    // });
+
+    function getCurrentPosition(...args) {
+      return new Promise((resolve, reject) => {
+        navigator.geolocation.getCurrentPosition(...args, resolve, reject);
+      });
+    }
+
+    async function go() {
+      console.log('starting');
+      const pos = await getCurrentPosition();
+      console.log(pos);
+      console.log('finished');
+    }
+
+
+    go();
+  </script>
+</body>
+
+</html>
