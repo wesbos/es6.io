@@ -1,7 +1,7 @@
 1. First Install your dependencies:
 
 ```bash
-npm install webpack@beta babel-loader babel-core babel-preset-es2015-native-modules --save-dev
+npm install webpack babel-loader babel-core babel-preset-es2015-native-modules --save-dev
 ```
 
 2. Then, Create a `webpack.config.js` file:
