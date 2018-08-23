@@ -21,7 +21,7 @@
   function getPostById(id) {
     // create a new promise
     return new Promise((resolve, reject) => {
-      // using a settimeout to mimick a databse
+      // using a setTimeout to mimic a database
       setTimeout(() => {
         // find the post we want
         const post = posts.find(post => post.id === id);
