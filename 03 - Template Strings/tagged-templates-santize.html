@@ -20,7 +20,7 @@
 <script>
   function sanitize(strings, ...values) {
     const dirty = strings.reduce((prev, next, i) => `${prev}${next}${values[i] || ''}`, '');
-    return DOMPurify.sanitize(dirty);
+     return DOMPurify.sanitize(dirty);
   }
 
   const first = 'Wes';
