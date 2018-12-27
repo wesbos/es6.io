@@ -41,7 +41,7 @@
     // map to an array of seconds
     .map(timecode => {
       const parts = timecode.split(':').map(part => parseFloat(part));
-      return (parts[0] * 60) + parts[1];
+ return (parts[0] * 60) + parts[1];
     })
     // reduce to get total
     .reduce((runningTotal, seconds) => runningTotal + seconds, 0)
