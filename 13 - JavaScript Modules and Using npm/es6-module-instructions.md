@@ -1,49 +1,19 @@
 1. First Install your dependencies:
 
 ```bash
-npm install webpack babel-loader babel-core babel-preset-es2015-native-modules --save-dev
+npm install webpack webpack-cli
 ```
 
 2. Then, Create a `webpack.config.js` file:
 
 ```js
-const webpack = require('webpack');
-const nodeEnv = process.env.NODE_ENV || 'production';
-
 module.exports = {
+  mode: process.env.NODE_ENV || 'production',
   devtool: 'source-map',
-  entry: {
-    filename: './app.js'
-  },
+  entry: './app.js',
   output: {
-    filename: '_build/bundle.js'
+    filename: 'bundle.js',
   },
-  module: {
-    loaders: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015-native-modules']
-        }
-      }
-    ]
-  },
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      },
-      output: {
-        comments: false
-      },
-      sourceMap: true
-    }),
-    new webpack.DefinePlugin({
-      'process.env': { NODE_ENV: JSON.stringify(nodeEnv) }
-    })
-  ]
 };
 ```
 
@@ -52,4 +22,3 @@ module.exports = {
 ```json
 "build": "webpack --progress --watch"
 ```
-

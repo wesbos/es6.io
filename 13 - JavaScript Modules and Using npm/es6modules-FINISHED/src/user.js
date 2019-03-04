@@ -1,4 +1,4 @@
-import slug from 'slug';
+import slug from 'slugify';
 import { url } from './config';
 import md5 from 'md5';
 
