@@ -11,31 +11,15 @@
     console.log(width);
   }
   setWidth();
-  console.log(width); // not available
-
-
-  // fixed example
-  var width;
-  function setWidth() {
-      width = 100;
-      console.log(width);
-  }
-  setWidth(); 
-  console.log(width); // now it's accessible but not preferred
-
-
 
   var age = 100;
   if(age > 12) {
-    var dogYears = age * 7; // leaked outside the if statement
-                            // need to change it to let | const
+    const dogYears = age * 7;
     console.log(`You are ${dogYears} dog years old!`);
   }
-  console.log(dogYears); // var dogYears still accessible
-
 
   let height = 200;
-  const key = 'abc123'; // not mutable
+  const key = 'abc123';
 </script>
 </body>
 </html>
